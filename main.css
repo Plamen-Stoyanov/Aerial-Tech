@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Exo+2|Open+Sans');
+:root {
+    --subheadings: 'Exo 2';
+    --main-text: #080808;
+    --logo-size: 60px;
+    --logo-shrink: calc(var(--logo-size) * 0.75);
+    --highlight-background: linear-gradient(#36856f, #3b9179, #409d83, #409d83, #409d83, #3b9179, #36856f);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100.01%;
+    letter-spacing: 0.1em;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background: lightgrey;
+}
+
+header {
+    background-image: url("images/action-air-aircraft-442587.jpg");
+    background-size: cover;
+    /* margin: 0; */
+    height: 100vh;
+}
+
+main {
+    position: relative;
+}
+
+footer {
+    position: relative;
+    background: lightgrey;
+    padding-top: 5vh;
+    border-top: 3px groove lightgrey;
+    font-family: sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-family: var(--subheadings, sans-serif);
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+nav a {
+    color: rgb(2, 2, 2);
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--main-text, #222);
+}
+
+#navbar-toggle {
+    display: none;
+}
+
+#header-img {
+    position: relative;
+    left: 10px;
+    width: var(--logo-size, 60px);
+    height: var(--logo-size, 60px);
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 9vh;
+    line-height: 1.2;
+    color: var(--main-text, #222);
+}
+
+h2 {
+    font-family: var(--subheadings, sans-serif);
+    color: var(--main-text, #222);
+}
+
+p {
+    color: var(--main-text, #222);
+}
+
+a {
+    text-decoration: none;
+    color: #0000ff;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.header-section {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 95%;
+}
+
+#main-subheading {
+    position: relative;
+    line-height: 1.2;
+    top: 1.5em;
+}
+
+@media (max-width: 1290px) {
+    #main-subheading {
+        top: 6.5em;
+    }
+}
+
+.promotional-banner {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(#36856f, #3b9179, #409d83, #409d83, #409d83, #3b9179, #36856f);
+    color: black;
+    border-top: 1px solid hsl(120, 50%, 15%);
+    border-bottom: 1px solid hsl(120, 50%, 15%);
+    font-family: var(--subheadings, sans-serif);
+}
+
+.prom-section {
+    display: block;
+    text-align: center;
+    /* padding: 1em; */
+    width: 150px;
+    max-width: 100%;
+}
+
+.prom-subheading {
+    text-align: center;
+}
+
+.prom-caption {
+    margin-top: 5px;
+}
+
+.product-description-section {
+    padding: 9vh 0 7vh 0;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #fcfbf7, #fff, #fff, #fff, #fcfbf7);
+    /* background: hsl(0, 0%, 99%); */
+}
+
+.product-description-section h2 {
+    text-align: center;
+    margin: 0 10px 1.5em 10px;
+    font-size: 2em;
+    line-height: 1.5;
+}
+
+.jum-tron-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.jum-tron-section {
+    position: relative;
+    width: 560px;
+    max-width: 100%;
+    height: 315px;
+    margin: 0 10px 5vh 10px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        position: relative;
+        /* bottom: 10vh; */
+    }
+    #main-subheading {
+        top: 1.5em;
+    }
+    #header-img {
+        width: var(--logo-shrink, 50px);
+        height: var(--logo-shrink, 50px);
+    }
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px 0;
+        margin-bottom: 4rem;
+        background: #409d83;
+    }
+    .nav-links {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        align-self: flex-start;
+        right: 60px;
+    }
+    .nav-link {
+        font-size: 1.5rem;
+        line-height: 2;
+    }
+    #navbar-toggle {
+        display: initial;
+        position: fixed;
+        align-self: flex-end;
+        right: 10px;
+        top: 20px;
+        width: 30px;
+        height: auto;
+    }
+    .toggle-reveal {
+        display: flex;
+    }
+    .jum-tron-section {
+        height: auto;
+    }
+}
+
+.features {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    /* margin: 10vh 0 10vh 0; */
+    padding: 15vh 0;
+    background: linear-gradient(#36856f, #3b9179, #409d83, #409d83, #409d83, #3b9179, #36856f);
+    border-top: 1px solid #276151;
+    border-bottom: 1px solid #276151;
+}
+
+.features-section {
+    padding: 1em;
+    border: 2px solid #276151;
+    border-radius: 6px;
+    width: 360px;
+    max-width: 100%;
+    line-height: 1.5;
+    text-align: center;
+    margin: 1em 0.5em 1em 0.5em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background: linear-gradient(180deg, #fcfbf7, #fff, #fff, #fff, #fff, #fcfbf7);
+}
+
+.features-subheading {
+    font-family: var(--subheadings, sans-serif);
+}
+
+.product-features {
+    text-align: justify;
+}
+
+@media (max-width: 420px) {
+    .promotional-banner {
+        flex-direction: column;
+    }
+    .features-section {
+        padding: 10px;
+    }
+}
+
+.small-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.portfolio-section {
+    padding: 9vh 0;
+    background: linear-gradient(180deg, #fcfbf7, #fff, #fff, #fff, #fff, #fcfbf7);
+    padding-bottom: 10vh;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    margin: 0 auto 1.5em;
+    font-size: 2em;
+    line-height: 1.5;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+    .portfolio-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio-item {
+    width: 100%;
+    max-width: 100%;
+    justify-self: center;
+    padding: 10px;
+    text-align: center;
+    height: 99.99%;
+}
+
+.portfolio-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #276151;
+}
+
+.portfolio-gallery img {
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.top-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+footer h2 {
+    margin-top: 2em;
+    font-family: sans-serif;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    .top-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .top-footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.social-icons {
+    text-align: left;
+    font-size: 2em;
+}
+
+.social-icons img {
+    padding: 5px;
+    margin-top: 0.5em;
+}
+
+.partners li {
+    position: relative;
+    line-height: 4;
+    text-align: left;
+}
+
+.bottom-footer {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    line-height: 1.5;
+    grid-gap: 8px;
+    text-align: left;
+    width: 100%;
+    margin-top: 2em;
+}
+
+input {
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 0.5em;
+    width: 200px;
+    max-width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333333;
+}
+
+::placeholder {
+    color: #333333;
+    opacity: 1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#submit {
+    padding: 0.4em;
+    background: linear-gradient(#333, #222, #111);
+    /* linear-gradient(#808080, #a2a2a2, #808080); */
+    border: 1px ridge #333333;
+    border-radius: 3px;
+    font-family: var(--subheadings, sans-serif);
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#submit:hover {
+    opacity: 0.6;
+}
